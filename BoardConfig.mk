@@ -18,7 +18,7 @@ PLATFORM_PATH := device/pantech/ef51
 -include device/pantech/msm8960-common/BoardConfigCommon.mk
 
 # ReleaseTools
-TARGET_RELEASETOOLS_EXTENSIONS := device/pantech/ef52/releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := device/pantech/ef51/releasetools
 
 # inherit from the proprietary version
 -include vendor/pantech/ef51/BoardConfigVendor.mk
@@ -30,6 +30,7 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 20971520 #20MB
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 20971520 #20MB
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1782579200 #1.7GB
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 27577531392 #25.7GB
+BOARD_CACHEIMAGE_PARTITION_SIZE := 419430400 # 400M
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Recovery allowed devices
