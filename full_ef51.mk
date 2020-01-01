@@ -21,12 +21,12 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/pantech/ef52/device.mk)
+$(call inherit-product, device/pantech/ef51/device.mk)
 
-PRODUCT_DEVICE := ef52
-PRODUCT_NAME := full_ef52
+PRODUCT_DEVICE := ef51
+PRODUCT_NAME := full_ef51
 PRODUCT_BRAND := VEGA
-PRODUCT_MODEL := Vega Iron
+PRODUCT_MODEL := Vega No.6
 PRODUCT_MANUFACTURER := Vega
 PRODUCT_RESTRICT_VENDOR_FILES := false
 #For some makefile on first run

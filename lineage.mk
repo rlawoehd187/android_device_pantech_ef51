@@ -1,20 +1,18 @@
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1080
-TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 1920
+TARGET_SCREEN_WIDTH := 1080
 
 # Inherit some common BlurOS stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/pantech/ef52/full_ef52.mk)
-
-BOARD_HARDWARE_CLASS := device/pantech/ef52/lineagehw/
+$(call inherit-product, device/pantech/ef51/full_ef51.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := ef52
-PRODUCT_NAME := cm_ef52
+PRODUCT_DEVICE := ef51
+PRODUCT_NAME := lineage_ef51
 PRODUCT_BRAND := Vega
-PRODUCT_MODEL := Vega Iron
+PRODUCT_MODEL := Vega No.6
 PRODUCT_MANUFACTURER := Vega
 
 # Set build fingerprint / ID / Product Name ect.

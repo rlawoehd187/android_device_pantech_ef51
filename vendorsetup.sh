@@ -14,6 +14,6 @@
 # limitations under the License.
 #
 
-add_lunch_combo cm_ef52-userdebug
-add_lunch_combo cm_ef52-eng
-add_lunch_combo cm_ef52-user
+add_lunch_combo lineage_ef51-userdebug
+add_lunch_combo lineage_ef51-eng
+add_lunch_combo lineage_ef51-user

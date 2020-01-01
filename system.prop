@@ -1,5 +1,5 @@
 #
-# system.prop for ef52
+# system.prop for ef51
 #
 
 rild.libpath=/system/lib/libril-qc-qmi-1.so

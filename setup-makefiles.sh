@@ -1,7 +1,7 @@
 #!/bin/sh
 
 VENDOR=pantech
-DEVICE=ef52l
+DEVICE=ef51
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 

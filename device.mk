@@ -16,13 +16,13 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-$(call inherit-product, vendor/pantech/ef52/ef52-vendor.mk)
+$(call inherit-product, vendor/pantech/ef51/ef51-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/pantech/ef52/overlay
+DEVICE_PACKAGE_OVERLAYS += device/pantech/ef51/overlay
 
 # Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Camera
 #PRODUCT_PACKAGES += \
@@ -34,44 +34,39 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # audio UCM files
 #PRODUCT_COPY_FILES += \
-                       device/pantech/ef52/snd_soc_msm/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
-
-# Checking model
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/releasetools/device_check.sh:system/bin/device_check.sh
-
+                       device/pantech/ef51/snd_soc_msm/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
 # keylayout
 PRODUCT_COPY_FILES += \
-	device/pantech/ef52/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
-	device/pantech/ef52/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
-	device/pantech/ef52/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-	device/pantech/ef52/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-	device/pantech/ef52/keylayout/apq8064-tabla-snd-card_Button_Jack.kl:system/usr/keylayout/apq8064-tabla-snd-card_Button_Jack.kl 
+	device/pantech/ef51/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+	device/pantech/ef51/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
+	device/pantech/ef51/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+	device/pantech/ef51/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
+	device/pantech/ef51/keylayout/apq8064-tabla-snd-card_Button_Jack.kl:system/usr/keylayout/apq8064-tabla-snd-card_Button_Jack.kl 
 
 # keychars
 PRODUCT_COPY_FILES += \
-	device/pantech/ef52/keychars/Generic.kcm:system/usr/keychars/Generic.kcm \
-	device/pantech/ef52/keychars/qwerty2.kcm:system/usr/keychars/qwerty2.kcm \
-	device/pantech/ef52/keychars/qwerty.kcm:system/usr/keychars/qwerty.kcm \
-	device/pantech/ef52/keychars/Virtual.kcm:system/usr/keychars/Virtual.kcm
+	device/pantech/ef51/keychars/Generic.kcm:system/usr/keychars/Generic.kcm \
+	device/pantech/ef51/keychars/qwerty2.kcm:system/usr/keychars/qwerty2.kcm \
+	device/pantech/ef51/keychars/qwerty.kcm:system/usr/keychars/qwerty.kcm \
+	device/pantech/ef51/keychars/Virtual.kcm:system/usr/keychars/Virtual.kcm
 
 # idc
 PRODUCT_COPY_FILES += \
-	device/pantech/ef52/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
-	device/pantech/ef52/idc/qwerty.idc:system/usr/idc/qwerty.idc \
+	device/pantech/ef51/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
+	device/pantech/ef51/idc/qwerty.idc:system/usr/idc/qwerty.idc \
 
 PRODUCT_COPY_FILES += \
-	device/pantech/ef52/thermald/thermald-8064_ef52.conf:system/etc/thermald.conf \
-	device/pantech/ef52/thermald/thermal-engine-8064.conf:system/etc/thermal-engine-8064.conf
+	device/pantech/ef51/thermald/thermald-8064_ef51.conf:system/etc/thermald.conf \
+	device/pantech/ef51/thermald/thermal-engine-8064.conf:system/etc/thermal-engine-8064.conf
 
 PRODUCT_PACKAGES += \
     Torch
 
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.sf.lcd_density=300
+	ro.sf.lcd_density=480
 
 # call dalvik heap config
-$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
 
 # Inherit from msm8974-common
 $(call inherit-product, device/pantech/msm8960-common/msm8960.mk)
