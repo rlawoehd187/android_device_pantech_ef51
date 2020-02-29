@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+PLATFORM_PATH := device/pantech/ef51
+
+# Inherit from msm8960-common
 -include device/pantech/msm8960-common/BoardConfigCommon.mk
 
 # ReleaseTools
@@ -33,6 +36,9 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_OTA_ASSERT_DEVICE := ef51l,ef51s,ef51k,ef51
 
 TARGET_BOOTANIMATION_HALF_RES := true
+
+# Properties
+TARGET_SYSTEM_PROP += $(PLATFORM_PATH)/system.prop
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/pantech/ef51/bluetooth
