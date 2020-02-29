@@ -1,6 +1,5 @@
 /*
  * Copyright (C) 2013 The CyanogenMod Project
- *           (C) 2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.lineageos.hardware;
+package org.cyanogenmod.hardware;
 
-import org.lineageos.internal.util.FileUtils;
+import org.cyanogenmod.internal.util.FileUtils;
 
 import android.os.SystemProperties;
 

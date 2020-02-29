@@ -1,8 +1,9 @@
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
-# Inherit some common BlurOS stuff.
+# Inherit some common Slim stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
@@ -13,14 +14,8 @@ PRODUCT_DEVICE := ef51
 PRODUCT_NAME := lineage_ef51
 PRODUCT_BRAND := Vega
 PRODUCT_MODEL := Vega No.6
-PRODUCT_MANUFACTURER := Vega
+PRODUCT_MANUFACTURER := Pantech
 
-# Set build fingerprint / ID / Product Name ect.
-#PRODUCT_BUILD_PROP_OVERRIDES += \
-#    PRODUCT_NAME="Vega Iron" \
-#    TARGET_DEVICE=ef52 \
+TARGET_DEVICE := ef51
 
-
-# Enable Torch
-#PRODUCT_PACKAGES += Torch
 

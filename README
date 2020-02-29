@@ -11,5 +11,8 @@ else
 endif
 
 
+Run this command after . build/envsetup.sh
+ef51-patch-apply
 
-Add ef52.xml to .repo/loca_manifest
+After build finsish, run this command
+ef51-patch-clean

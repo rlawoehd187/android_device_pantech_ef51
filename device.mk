@@ -29,19 +29,21 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 #    camera.msm8960
 
 # Lights
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
 	lights.msm8960
 
-# audio UCM files
-#PRODUCT_COPY_FILES += \
-                       device/pantech/ef51/snd_soc_msm/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
+# Checking model
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/releasetools/device_check.sh:system/bin/device_check.sh
+
 # keylayout
 PRODUCT_COPY_FILES += \
 	device/pantech/ef51/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
 	device/pantech/ef51/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
 	device/pantech/ef51/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
 	device/pantech/ef51/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-	device/pantech/ef51/keylayout/apq8064-tabla-snd-card_Button_Jack.kl:system/usr/keylayout/apq8064-tabla-snd-card_Button_Jack.kl 
+	device/pantech/ef51/keylayout/apq8064-tabla-snd-card_Button_Jack.kl:system/usr/keylayout/apq8064-tabla-snd-card_Button_Jack.kl
+
 
 # keychars
 PRODUCT_COPY_FILES += \
@@ -54,19 +56,20 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/pantech/ef51/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
 	device/pantech/ef51/idc/qwerty.idc:system/usr/idc/qwerty.idc \
-
-PRODUCT_COPY_FILES += \
-	device/pantech/ef51/thermald/thermald-8064_ef51.conf:system/etc/thermald.conf \
-	device/pantech/ef51/thermald/thermal-engine-8064.conf:system/etc/thermal-engine-8064.conf
-
+    
 PRODUCT_PACKAGES += \
     Torch
+
+PRODUCT_COPY_FILES += \
+	device/pantech/ef51/thermald/thermald.conf:system/etc/thermald.conf \
+	device/pantech/ef51/thermald/thermal-engine-8064.conf:system/etc/thermal-engine-8064.conf
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sf.lcd_density=480
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 
 # Inherit from msm8974-common
 $(call inherit-product, device/pantech/msm8960-common/msm8960.mk)

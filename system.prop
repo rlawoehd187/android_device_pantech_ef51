@@ -1,10 +1,11 @@
 #
 # system.prop for ef51
 #
-
+ro.rom.author=Lê Hoàng
+#
+#
 rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
-ro.baseband.arch=mdm
 persist.rild.nitz_plmn=
 persist.rild.nitz_long_ons_0=
 persist.rild.nitz_long_ons_1=
@@ -20,7 +21,6 @@ debug.sf.hw=1
 debug.egl.hw=1
 persist.data_netmgrd_mtu=1450
 persist.timed.enable=true
-rol.ril.ext.ecclist=113,114,115
 #
 # system props for the data modules
 #
@@ -41,9 +41,9 @@ persist.qcril.disable_retry = false
 #to display only once. even silent reset
 ril.data.bootingpopup=0
 # default local
-persist.sys.timezone=Asia/Korean
-persist.sys.language=ko
-persist.sys.region=KR
-persist.sys.country=KR
+persist.sys.timezone=Asia/Bangkok
+persist.sys.language=vi
+persist.sys.region=VN
+persist.sys.country=VN
 #changed data connection to disconnection as soon as entering no-service
 persist.telephony.oosisdc=false

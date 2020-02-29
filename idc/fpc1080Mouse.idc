@@ -1,4 +1,4 @@
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2010 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,15 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := $(call my-dir)
-
-include $(CLEAR_VARS)
-
-LOCAL_MODULE := nfc.pn544
-LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
-LOCAL_SRC_FILES := nfc_hw.c
-LOCAL_SHARED_LIBRARIES := liblog libcutils
-LOCAL_MODULE_TAGS := optional
-LOCAL_CFLAGS += -D$(TARGET_DEVICE)
-
-include $(BUILD_SHARED_LIBRARY)
+#
+# Emulator keyboard configuration file #1.
+#
+cursor.orientationAware = 1

@@ -1,1 +1,1 @@
-require board=ef52
+require board=ef51

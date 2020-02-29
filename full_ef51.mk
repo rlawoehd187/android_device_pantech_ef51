@@ -26,8 +26,8 @@ $(call inherit-product, device/pantech/ef51/device.mk)
 PRODUCT_DEVICE := ef51
 PRODUCT_NAME := full_ef51
 PRODUCT_BRAND := VEGA
-PRODUCT_MODEL := Vega No.6
-PRODUCT_MANUFACTURER := Vega
+PRODUCT_MODEL := IM-A860
+PRODUCT_MANUFACTURER := Pantech
 PRODUCT_RESTRICT_VENDOR_FILES := false
 #For some makefile on first run
 TARGET_DEVICE := $(PRODUCT_DEVICE)

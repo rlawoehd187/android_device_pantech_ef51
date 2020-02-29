@@ -1,5 +1,5 @@
 #
-# Copyright 2013 The Android Open Source Project
+# Copyright (C) 2016 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,6 +14,7 @@
 # limitations under the License.
 #
 
-add_lunch_combo lineage_ef51-userdebug
-add_lunch_combo lineage_ef51-user
-add_lunch_combo lineage_ef51-eng
+def FullOTA_InstallEnd(info):
+    info.script.Mount("/system");
+    info.script.AppendExtra('assert(run_program("/system/bin/device_check.sh") == 0);');
+    info.script.Unmount("/system");
