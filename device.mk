@@ -38,31 +38,31 @@ PRODUCT_COPY_FILES += \
 
 # keylayout
 PRODUCT_COPY_FILES += \
-	device/pantech/ef51/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
-	device/pantech/ef51/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
-	device/pantech/ef51/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-	device/pantech/ef51/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-	device/pantech/ef51/keylayout/apq8064-tabla-snd-card_Button_Jack.kl:system/usr/keylayout/apq8064-tabla-snd-card_Button_Jack.kl
+	device/pantech/ef51/keylayout/AVRCP.kl:$(TARGET_OUT_VENDOR)/usr/keylayout/AVRCP.kl \
+	device/pantech/ef51/keylayout/Generic.kl:$(TARGET_OUT_VENDOR)/usr/keylayout/Generic.kl \
+	device/pantech/ef51/keylayout/gpio-keys.kl:$(TARGET_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
+	device/pantech/ef51/keylayout/qwerty.kl:$(TARGET_OUT_VENDOR)/usr/keylayout/qwerty.kl \
+	device/pantech/ef51/keylayout/apq8064-tabla-snd-card_Button_Jack.kl:$(TARGET_OUT_VENDOR)/usr/keylayout/apq8064-tabla-snd-card_Button_Jack.kl
 
 
 # keychars
 PRODUCT_COPY_FILES += \
-	device/pantech/ef51/keychars/Generic.kcm:system/usr/keychars/Generic.kcm \
-	device/pantech/ef51/keychars/qwerty2.kcm:system/usr/keychars/qwerty2.kcm \
-	device/pantech/ef51/keychars/qwerty.kcm:system/usr/keychars/qwerty.kcm \
-	device/pantech/ef51/keychars/Virtual.kcm:system/usr/keychars/Virtual.kcm
+	device/pantech/ef51/keychars/Generic.kcm:$(TARGET_OUT_VENDOR)/usr/keychars/Generic.kcm \
+	device/pantech/ef51/keychars/qwerty2.kcm:$(TARGET_OUT_VENDOR)/usr/keychars/qwerty2.kcm \
+	device/pantech/ef51/keychars/qwerty.kcm:$(TARGET_OUT_VENDOR)/usr/keychars/qwerty.kcm \
+	device/pantech/ef51/keychars/Virtual.kcm:$(TARGET_OUT_VENDOR)/usr/keychars/Virtual.kcm
 
 # idc
 PRODUCT_COPY_FILES += \
-	device/pantech/ef51/idc/qwerty2.idc:system/usr/idc/qwerty2.idc \
-	device/pantech/ef51/idc/qwerty.idc:system/usr/idc/qwerty.idc \
+	device/pantech/ef51/idc/qwerty2.idc:$(TARGET_OUT_VENDOR)/usr/idc/qwerty2.idc \
+	device/pantech/ef51/idc/qwerty.idc:$(TARGET_OUT_VENDOR)/usr/idc/qwerty.idc \
     
 PRODUCT_PACKAGES += \
     Torch
 
 PRODUCT_COPY_FILES += \
-	device/pantech/ef51/thermald/thermald.conf:system/etc/thermald.conf \
-	device/pantech/ef51/thermald/thermal-engine-8064.conf:system/etc/thermal-engine-8064.conf
+	device/pantech/ef51/thermald/thermald.conf:$(TARGET_OUT_VENDOR)/vendor/etc/thermald.conf \
+	device/pantech/ef51/thermald/thermal-engine-8064.conf:$(TARGET_OUT_VENDOR)/vendor/etc/thermal-engine-8064.conf
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sf.lcd_density=480
