@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_ef51.mk
+    $(LOCAL_DIR)/lineage_ef51.mk

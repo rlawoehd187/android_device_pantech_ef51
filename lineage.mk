@@ -21,6 +21,9 @@ TARGET_SCREEN_WIDTH := 1080
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Inherit device configuration
+$(call inherit-product, device/pantech/ef51/full_ef51.mk)
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ef51
 PRODUCT_NAME := lineage_ef51
@@ -28,7 +31,6 @@ PRODUCT_BRAND := Vega
 PRODUCT_MODEL := Vega No.6
 PRODUCT_MANUFACTURER := Pantech
 
-TARGET_DEVICE := ef51
 TARGET_VENDOR := Pantech
 TARGET_VENDOR_PRODUCT_NAME := ef51
 TARGET_VENDOR_DEVICE_NAME := ef51
@@ -37,6 +39,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="msm8960-user 4.4.2 KOT49H IM-A860S.103 release-keys" 
 
 BUILD_FINGERPRINT := VEGA/VEGA_IM-A860S/ef51s:4.4.2/KOT49H/IM-A860S.103:user/release-keys
-
-# Inherit device configuration
-$(call inherit-product, device/pantech/ef51/full_ef51.mk)
